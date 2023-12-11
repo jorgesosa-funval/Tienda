@@ -1,6 +1,10 @@
  
 <?php
-$nombre = "miguel";
+// David Ortega
+
+// MICHAEL VELASQUEZ MV 
  
-// MICHAEL VELASQUEZ MV
+$nombre = "miguel";
+
+ 
  
