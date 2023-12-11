@@ -3,20 +3,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Config/config.php';
 
 class Database
 {
-    private $hostname;
+    
     private $username;
     private $password;
-    private $dbname;
     private $conn;
+    private $dsn;
     
     public function __construct()
     {
-        $this->hostname = HOST_NAME;
+        
         $this->username = USER_NAME;
         $this->password = PASSWORD;
-        $this->dbname = DB_NAME;
+        $this->dsn = DSN;
 
-        $this->conn = new PDO("mysql:host=$this->hostname;dbname=$this->dbname", $this->username, $this->password);
+        $this->conn = new PDO($this->dsn, $this->username, $this->password);
     }
 
 
