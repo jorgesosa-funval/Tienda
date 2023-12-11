@@ -1,4 +1,6 @@
 <?php
+namespace Models;
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Config/config.php';
 
 class Database
@@ -16,7 +18,7 @@ class Database
         $this->password = PASSWORD;
         $this->dbname = DB_NAME;
 
-        $this->conn = new PDO("mysql:host=$this->hostname;dbname=$this->dbname", $this->username, $this->password);
+        $this->conn = new \PDO("mysql:host=$this->hostname;dbname=$this->dbname", $this->username, $this->password);
     }
 
 
