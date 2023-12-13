@@ -30,7 +30,4 @@ class Pedido
             echo $e->getMessage();
         }
     }
-}
-$clienteController = new Pedido;
-
-print_r($clienteController->all());
+} 

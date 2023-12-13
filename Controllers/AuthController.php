@@ -11,22 +11,24 @@ class AuthController
     {
 
         $correo =  $_POST['correo'];
+
         $password =  $_POST['password'];
 
         $auth = new Auth;
         $user = $auth->select($correo);
 
         if(password_verify($password, $user['password'])){
+
             session_start();
             $_SESSION['userData'] =  $user;
 
             header('location: ../Views/templates/sidebar.php');
+            
         }else{
             header('location: ../index.php');
         }
         
     }
-
 
     public function store()
     {
