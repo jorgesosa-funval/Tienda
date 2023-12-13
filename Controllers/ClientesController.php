@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-use Models\Clientes;
+use Models\Cliente;
 
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
@@ -12,7 +12,7 @@ class ClientesController
 
     public function index()
     {
-        $clientes = new Clientes;
+        $clientes = new Cliente;
 
         $data = $clientes->all();
 
