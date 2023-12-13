@@ -21,6 +21,3 @@ class ClientesController
 }
 
 
-// $clienteController = new ClientesController;
-
-// print_r($clienteController->index());

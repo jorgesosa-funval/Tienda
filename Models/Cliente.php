@@ -6,7 +6,7 @@ use Models\Database;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
 
-class Clientes
+class Cliente
 {
     private $conexion;
     public function __construct()
