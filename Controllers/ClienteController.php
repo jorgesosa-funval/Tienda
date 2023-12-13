@@ -27,6 +27,7 @@ class ClienteController
     // crear un nuevo registro
     public function store() // Arturo
     {
+        echo "prueba";
     }
 
     // actializar un registro
