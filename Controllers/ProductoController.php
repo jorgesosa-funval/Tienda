@@ -20,22 +20,22 @@ class ProductoController
     }
     
     // Mostrar un registro de la tabla
-    public function show()
+    public function show() //Mateus
     {
     }
 
     // crear un nuevo registro
-    public function strore()
+    public function store() // Raysell
     {
     }
 
     // actializar un registro
-    public function update()
+    public function update() //Derek 
     {
     }
     
     // Eliminar un registro de la tabla
-    public function destroy()
+    public function destroy()//Miguel
     {
     }
 }

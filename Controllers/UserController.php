@@ -20,17 +20,17 @@ class ClienteController
     }
 
     // Mostrar un registro de la tabla
-    public function show()
+    public function show() // Omar
     {
     }
 
     // actializar un registro
-    public function update()
+    public function update() // David
     {
     }
     
     // Eliminar un registro de la tabla
-    public function destroy()
+    public function destroy() //Jairo
     {
     }
 }

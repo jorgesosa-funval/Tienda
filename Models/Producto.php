@@ -31,7 +31,7 @@ class Producto
         }
     }
     // Encontrar producto donde el id sea ?
-    public function find($id)
+    public function find($id) //Mateus
     {
 
         $query = 'SELECT * FROM productos Where id = ?';
@@ -48,7 +48,7 @@ class Producto
     }
 
     // crear nuevo producto
-    public function create($nombre, $precio)
+    public function create($nombre, $precio) // Raysell
     {
 
         $query = '';
@@ -63,7 +63,7 @@ class Producto
     }
 
     //actualizar un producto
-    public function update($id)
+    public function update($id) //Dereck
     {
 
         $query = '';
@@ -78,7 +78,7 @@ class Producto
     }
 
     //eliminar un producto
-    public function delete($id)
+    public function delete($id) //Miguel
     {
 
         $query = '';

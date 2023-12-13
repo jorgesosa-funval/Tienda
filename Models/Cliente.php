@@ -33,7 +33,7 @@ class Cliente
     }
 
     //encontrar un cliente donde id es igual a ?
-    public function find($id)
+    public function find($id) // Victor
     {
 
         $query = 'SELECT * FROM clientes Where id = ?';
@@ -50,7 +50,7 @@ class Cliente
     }
 
     //crear un cliente
-    public function create($nombre, $direccion, $telefono)
+    public function create($nombre, $direccion, $telefono) // arturo 
     {
 
         $query = '';
@@ -64,7 +64,7 @@ class Cliente
     }
 
     //actualizar un cliente
-    public function update($id)
+    public function update($id) //Aaron
     {
 
         $query = '';
@@ -78,7 +78,7 @@ class Cliente
     }
 
     // eliminar un cliente
-    public function delete($id)
+    public function delete($id) //Michael
     {
 
         $query = '';

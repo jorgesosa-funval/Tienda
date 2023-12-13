@@ -34,7 +34,7 @@ class Usuario
     }
     
     // encontrar el usuario donde el id se igual a ?
-    public function find($id)
+    public function find($id) //Omar
     {
 
         $query = 'SELECT * FROM usuarios Where id = ?';
@@ -51,7 +51,7 @@ class Usuario
     }
 
     //actualizar un usuario
-    public function update($id)
+    public function update($id) //David
     {
 
         $query = '';
@@ -66,7 +66,7 @@ class Usuario
     }
 
     //eliminar un usuario
-    public function delete($id)
+    public function delete($id) // Jairo
     {
 
         $query = '';
