@@ -72,6 +72,7 @@ class Producto
             $stm = $this->conexion->prepare($query);
             $stm->execute([$nombre_producto, $precio, $id]);
  
+            
         } catch (\PDOException $e) {
             echo $e->getMessage();
         }
