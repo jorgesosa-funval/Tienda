@@ -39,9 +39,10 @@ class Cliente
         $query = 'SELECT * FROM clientes Where id = ?';
 
         try {
+            
             $stm = $this->conexion->prepare($query);
             $stm->execute([$id]);
-            $rs = $stm->fetchAll(\PDO::FETCH_ASSOC);
+            $rs = $stm->fetch(\PDO::FETCH_ASSOC);
 
             return $rs;
         } catch (\PDOException $e) {
