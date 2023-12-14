@@ -60,6 +60,9 @@ class ClienteController
     // actializar un registro
     public function update() // Aaron
     {
+        $user = new Cliente();
+        $user->update($_POST['nombre'], $_POST['direccion'], $_POST['telefono'], $_POST['id']);
+        return $user;
     }
     
     // Eliminar un registro de la tabla
