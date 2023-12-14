@@ -46,9 +46,3 @@ class ClienteController
     {
     }
 }
-
-
-// Hacer la instancia de la  Model 
-// luego llama a la funcion,   le pasa el parametro
-// guarda los datos en una variable y listo
-// como ejemplo es lo mismo que aparece el Login  solo que en vez de guardar en una variable de sessio lo guardara en una variable y le hare return.
