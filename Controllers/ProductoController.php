@@ -40,17 +40,9 @@ class ProductoController
     }
 
     // Eliminar un registro de la tabla
-    public function destroy($id, $usuario, $contraseña)
+    public function destroy($id,) //Miguel
     {
-        $conn = new PDO("mysql:host=localhost;dbname=tiendita", $usuario, $contraseña);
-        $sql = "DELETE FROM productos WHERE id = :id";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindValue(':id', $id);
-        $stmt->execute();
-        if ($stmt->rowCount() > 0) {
-            echo "Se eliminó el registro correctamente.";
-        } else {
-            echo "No se encontró el registro a eliminar.";
-        }
+        $producto = new Producto;
+        $producto->delete($id);
     }
 }
