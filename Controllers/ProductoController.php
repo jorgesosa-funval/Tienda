@@ -11,6 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
 
 class ProductoController
 {
+  
     //llamar todos los datos para cargar la tabla
     public function index()
     {
@@ -27,8 +28,10 @@ class ProductoController
     }
 
     // crear un nuevo registro
-    public function store() // Raysell
+    public function store($nombre, $producto) // Raysell
     {
+       $producto = new Producto;
+       $producto -> create($nombre, $producto);
     }
 
     // actializar un registro
