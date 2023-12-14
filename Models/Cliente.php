@@ -33,15 +33,16 @@ class Cliente
     }
 
     //encontrar un cliente donde id es igual a ?
-    public function find($id)
+    public function find($id) // Victor
     {
 
         $query = 'SELECT * FROM clientes Where id = ?';
 
         try {
+            
             $stm = $this->conexion->prepare($query);
             $stm->execute([$id]);
-            $rs = $stm->fetchAll(\PDO::FETCH_ASSOC);
+            $rs = $stm->fetch(\PDO::FETCH_ASSOC);
 
             return $rs;
         } catch (\PDOException $e) {
@@ -50,10 +51,10 @@ class Cliente
     }
 
     //crear un cliente
-    public function create($nombre, $direccion, $telefono)
+    public function create($nombre, $direccion, $telefono) // arturo 
     {
 
-        $query = '';
+        $query = 'INSERT INTO `clientes`(`nombre`, `direccion`, `telefono`) VALUES (?,?,?)';
 
         try {
             $stm = $this->conexion->prepare($query);
@@ -64,7 +65,7 @@ class Cliente
     }
 
     //actualizar un cliente
-    public function update($id)
+    public function update($id) //Aaron
     {
 
         $query = '';
@@ -78,7 +79,7 @@ class Cliente
     }
 
     // eliminar un cliente
-    public function delete($id)
+    public function delete($id) //Michael
     {
 
         $query = 'DELETE FROM usuarios WHERE id = ? ';

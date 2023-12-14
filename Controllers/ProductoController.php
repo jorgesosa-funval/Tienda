@@ -9,6 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
 
 class ProductoController
 {
+  
     //llamar todos los datos para cargar la tabla
     public function index()
     {
@@ -20,22 +21,24 @@ class ProductoController
     }
     
     // Mostrar un registro de la tabla
-    public function show()
+    public function show() //Mateus
     {
     }
 
     // crear un nuevo registro
-    public function strore()
+    public function store($nombre, $producto) // Raysell
     {
+       $producto = new Producto;
+       $producto -> create($nombre, $producto);
     }
 
     // actializar un registro
-    public function update()
+    public function update() //Derek 
     {
     }
     
     // Eliminar un registro de la tabla
-    public function destroy()
+    public function destroy()//Miguel
     {
     }
 }
