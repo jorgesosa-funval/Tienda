@@ -66,7 +66,7 @@ class Producto
     public function update($id, $nombre_producto, $precio) //Dereck
     {
 
-        $query = 'UPDATE productos SET nombre_productos=?, precio=? WHERE id=?';
+        $query = 'UPDATE productos SET nombre_producto=?, precio=? WHERE id=?';
 
         try {
             $stm = $this->conexion->prepare($query);
