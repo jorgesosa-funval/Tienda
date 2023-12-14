@@ -51,7 +51,7 @@ class Producto
     public function create($nombre, $precio) // Raysell
     {
 
-        $query = '';
+        $query = 'INSERT INTO productos (`nombre`, `precio`) VALUES (?, ?)';
 
         try {
             $stm = $this->conexion->prepare($query);
