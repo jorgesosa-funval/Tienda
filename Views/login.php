@@ -26,7 +26,7 @@
                     </button>
                 </form>
                 <div class="social-login">
-                   <a href="registrar.php">Registrate</a>
+                   <a href="../index.php?controller=AuthController&action=create">Registrate</a>
                      
                 </div>
             </div>

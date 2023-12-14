@@ -50,10 +50,12 @@ if (isset($_SESSION['userData'])) {
     section {
 
         padding: 24px;
-        padding-top: 65px;
-        min-height: 100vh;
+        min-height: calc(100vh - 64px);
+        bottom: 0;
         background-color: #f2f2f2;
         width: 280px;
+        position: absolute;
+
     }
 
     header {
@@ -61,7 +63,7 @@ if (isset($_SESSION['userData'])) {
         justify-content: end;
         align-items: center;
         height: 64px;
-        width: calc(100% - 280px);
+        width: 100%;
         position: absolute;
         right: 0;
         padding: 0 24px;
@@ -80,12 +82,22 @@ if (isset($_SESSION['userData'])) {
         background: salmon;
         border-radius: 100%;
     }
+
+    .mainContainer {
+        width: calc(100% - 280px);
+        min-height: calc(100vh - 64px);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+
+    }
 </style>
 <header>
     <nav>
         <div class="userConatiner">
             <div class="fotoUsuario"></div>
-            <h4>Nombre Usuario</h4>
+            <h4><?= $userData['correo'] ?></h4>
         </div>
         <ul></ul>
     </nav>
@@ -98,3 +110,8 @@ if (isset($_SESSION['userData'])) {
 
     </ul>
 </section>
+
+<div class="mainContainer">
+
+
+</div>
