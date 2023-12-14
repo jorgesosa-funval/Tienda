@@ -65,18 +65,19 @@ class Cliente
     }
 
     //actualizar un cliente
-    public function update($id) //Aaron
-    {
+public function update($nombre, $direccion, $telefono, $id) //Aaron
+{
+    $query = "UPDATE `clientes` SET `nombre`= ?,`direccion`=?,`telefono`=? WHERE `id`=?";
 
-        $query = '';
 
-        try {
-            $stm = $this->conexion->prepare($query);
-            $stm->execute([$id]);
-        } catch (\PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
+
+    try {
+        $stm = $this->conexion->prepare($query);
+        $stm->execute([$nombre, $direccion, $telefono, $id]);
+    } catch (\PDOException $e){
+        echo $e->getMessage();
+    }
+}
 
     // eliminar un cliente
     public function delete($id) //Michael
