@@ -82,7 +82,7 @@ class Producto
     public function delete($id) //Miguel
     {
 
-        $query = '';
+        $query = 'DELETE FROM productos WHERE id = ?';
 
         try {
             $stm = $this->conexion->prepare($query);

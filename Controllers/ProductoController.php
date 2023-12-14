@@ -4,6 +4,8 @@ namespace Controller;
 
 use Models\Producto;
 
+use PDO;
+
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
 
@@ -19,7 +21,7 @@ class ProductoController
 
         return $data;
     }
-    
+
     // Mostrar un registro de la tabla
     public function show($id) //Mateus
     {
@@ -51,9 +53,11 @@ class ProductoController
         $producto->update($id, $nombre_producto, $precio);
 
     }
-    
+
     // Eliminar un registro de la tabla
-    public function destroy()//Miguel
+    public function destroy($id,) //Miguel
     {
+        $producto = new Producto;
+        $producto->delete($id);
     }
 }
