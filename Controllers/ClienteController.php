@@ -20,6 +20,8 @@ class ClienteController
     }
 
     // Mostrar un registro de la tabla
+ 
+ 
     public function show($id) //Victor
     {
 
@@ -63,6 +65,10 @@ class ClienteController
     // Eliminar un registro de la tabla
     public function destroy() //michael
     {
+        $id =  $_GET['id'];
+        
+        $del = new Cliente();
+        $del -> delete($id);
     }
 }
 
