@@ -20,8 +20,20 @@ class ClienteController
     }
 
     // Mostrar un registro de la tabla
-    public function show() // Omar
+    public function show($id) // Omar
     {
+        $usuario = new Usuario;
+        $usuarioPar = $usuario->find($id);
+
+        if ($usuarioPar) {
+            $userData = "Nombre: " . $usuarioPar['nombre'] . "<br>";
+            $userData = "Direccion: " . $usuarioPar['direccion'] . "<br>";
+            $userData = "Telefono: " . $usuarioPar['telefono'] . "<br>";
+
+            echo "Cliente: $userData";
+        } else {
+            echo "Cliente no encontrado";
+        }
     }
 
     // actializar un registro
