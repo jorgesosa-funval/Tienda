@@ -53,7 +53,7 @@ class Cliente
     public function create($nombre, $direccion, $telefono) // arturo 
     {
 
-        $query = '';
+        $query = 'INSERT INTO `clientes`(`nombre`, `direccion`, `telefono`) VALUES (?,?,?)';
 
         try {
             $stm = $this->conexion->prepare($query);

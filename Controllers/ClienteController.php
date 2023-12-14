@@ -27,6 +27,11 @@ class ClienteController
     // crear un nuevo registro
     public function store() // Arturo
     {
+        $user = new Cliente();
+        $user->create($_POST['nombre'], $_POST['direccion'], $_POST['telefono']);
+        return $user;
+
+        exit;
     }
 
     // actializar un registro
