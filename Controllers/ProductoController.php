@@ -35,6 +35,13 @@ class ProductoController
     // actializar un registro
     public function update() //Derek 
     {
+        $id = $_POST['id'];
+        $nombre_producto = $_POST['nombre_producto'];
+        $precio = $_POST['precio'];
+
+        $producto = new Producto();
+        $producto->update($id, $nombre_producto, $precio);
+
     }
     
     // Eliminar un registro de la tabla

@@ -63,15 +63,16 @@ class Producto
     }
 
     //actualizar un producto
-    public function update($id) //Dereck
+    public function update($id, $nombre_producto, $precio) //Dereck
     {
 
-        $query = '';
+        $query = 'UPDATE productos SET nombre_producto=?, precio=? WHERE id=?';
 
         try {
             $stm = $this->conexion->prepare($query);
-            $stm->execute([$id]);
+            $stm->execute([$nombre_producto, $precio, $id]);
  
+            
         } catch (\PDOException $e) {
             echo $e->getMessage();
         }
