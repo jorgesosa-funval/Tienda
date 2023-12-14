@@ -20,9 +20,30 @@ class ClienteController
     }
 
     // Mostrar un registro de la tabla
-    public function show() //Victor
+    public function show($id) //Victor
     {
+
+        $cliente = new Cliente;
+        $clienteData = $cliente->find($id);
+
+        if ($clienteData){
+
+            $informacionCliente = "ID: " . $clienteData ['id'] . "<br>";
+            $informacionCliente .= "Nombre: " . $clienteData ['nombre'] . "<br>";
+            $informacionCliente .= "Direccion: " . $clienteData ['direccion'] . "<br>";
+            $informacionCliente .= "Telefono: " . $clienteData ['telefono'] . "<br>";
+
+            echo " Detalles del cliente ID $id: \n$informacionCliente";
+           
+            }else{
+
+            }echo" Cliente con ID $id no encontrado";
     }
+
+  
+
+
+
 
     // crear un nuevo registro
     public function store() // Arturo
@@ -44,3 +65,11 @@ class ClienteController
     {
     }
 }
+
+  // instanciia para probar cliente id
+
+  $clienteController = new ClienteController();
+  $idExistente = 1 ;
+  echo " Prabando ID)";
+  $clienteController ->show($idExistente);
+    
