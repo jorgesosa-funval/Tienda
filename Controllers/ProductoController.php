@@ -21,8 +21,16 @@ class ProductoController
     }
     
     // Mostrar un registro de la tabla
-    public function show() //Mateus
+    public function show($id) //Mateus
     {
+        $producto = new Producto();
+        $data = $producto->find($id);
+
+        if($data) {
+            return $data;
+        } else {
+            return 'Producto no encontrado';
+        }
     }
 
     // crear un nuevo registro
