@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
 class Usuario
 {
     private $conexion;
-    
+
     public function __construct()
     {
         $database = new Database;
@@ -32,7 +32,7 @@ class Usuario
             echo $e->getMessage();
         }
     }
-    
+
     // encontrar el usuario donde el id se igual a ?
     public function find($id) //Omar
     {
@@ -51,15 +51,13 @@ class Usuario
     }
 
     //actualizar un usuario
-    public function update($id) //David
+    public function update($id, $correo, $password, $rol_id) //David
     {
-
-        $query = '';
+        $query = "UPDATE usuarios SET correo = ?, password = ?, rol_id = ? WHERE id = ?";
 
         try {
             $stm = $this->conexion->prepare($query);
-            $stm->execute([$id]);
- 
+            $stm->execute([$correo, $password, $rol_id, $id]);
         } catch (\PDOException $e) {
             echo $e->getMessage();
         }
@@ -74,11 +72,8 @@ class Usuario
         try {
             $stm = $this->conexion->prepare($query);
             $stm->execute([$id]);
- 
         } catch (\PDOException $e) {
             echo $e->getMessage();
         }
     }
 }
-
-
