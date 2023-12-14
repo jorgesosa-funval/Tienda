@@ -81,7 +81,7 @@ class Cliente
     public function delete($id)
     {
 
-        $query = '';
+        $query = 'DELETE FROM usuarios WHERE id = ? ';
 
         try {
             $stm = $this->conexion->prepare($query);
