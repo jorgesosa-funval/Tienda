@@ -69,7 +69,7 @@ class Usuario
     public function delete($id) // Jairo
     {
 
-        $query = '';
+        $query = 'DELETE FROM usuarios WHERE id = ?';
 
         try {
             $stm = $this->conexion->prepare($query);

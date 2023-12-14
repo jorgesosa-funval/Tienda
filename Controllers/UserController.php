@@ -3,7 +3,7 @@
 namespace Controller;
 
 use Models\Cliente;
-
+use Models\Usuario;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
 
@@ -32,5 +32,12 @@ class ClienteController
     // Eliminar un registro de la tabla
     public function destroy() //Jairo
     {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+    
+            $usuario = new Usuario;
+            $usuario->delete($id);
+            
+        }
     }
 }
