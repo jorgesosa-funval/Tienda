@@ -80,6 +80,7 @@
         width: 60.55px;
     }
 </style>
+<a href="../index.php?controller=AuthController&action=create"><button class="edit">Nuevo Usuario</button></a>
 <table class="table">
     <thead class="nav">
         <tr class="nav">
@@ -92,39 +93,22 @@
         </tr>
     </thead>
     <tbody>
-        <tr class="celda">
-            <td class="id">1</td>
-            <td class="name"></td>
-            <td class="email"></td>
-            <td class="name"></td>
-            <td class="pp"></td>
-            <td class="actions">
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
-            </td>
-        </tr>
-        <tr class="celda">
-            <td class="id">2</td>
-            <td class="name"></td>
-            <td class="email"></td>
-            <td class="name"></td>
-            <td class="pp"></td>
-            <td class="actions">
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
-            </td>
-        </tr>
-        <tr class="celda">
-            <td class="id">3</td>
-            <td class="name"></td>
-            <td class="email"></td>
-            <td class="name"></td>
-            <td class="pp"></td>
-            <td class="actions">
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
-            </td>
-        </tr>
+
+        <?php foreach ($data as  $usuario) : ?>
+
+            <tr class="celda">
+                <td class="id"><?= $usuario['id'] ?></td>
+                <td class="name"></td>
+                <td class="email"><?= $usuario['correo'] ?></td>
+                <td class="name"><?= $usuario['rol_id'] ?></td>
+                <td class="pp"></td>
+                <td class="actions">
+                    <a href="../index.php?controller=UserController&action=updateView&id=<?= $usuario['id'] ?>"><button class="edit">Edit</button></a>
+                    <a href="../index.php?controller=UserController&action=destroy&id=<?= $usuario['id'] ?>"><button class="delete">Delete</button></a>
+                </td>
+
+            </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 

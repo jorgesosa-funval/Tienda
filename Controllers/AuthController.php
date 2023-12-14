@@ -61,6 +61,6 @@ class AuthController
 
         $auth->register($correo,  $hash, $rol_id);
 
-        header('location: index.php');
+        header('location: ../index.php?controller=UserController&action=index');
     }
 }
