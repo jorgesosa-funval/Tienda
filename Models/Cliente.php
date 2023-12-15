@@ -76,7 +76,7 @@ public function update($nombre, $direccion, $telefono, $id) //Aaron
         $stm->execute([$nombre, $direccion, $telefono, $id]);
     } catch (\PDOException $e){
         echo $e->getMessage();
-    }
+}
 }
 
     // eliminar un cliente

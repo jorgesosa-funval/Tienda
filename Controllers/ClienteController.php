@@ -54,7 +54,7 @@ class ClienteController
         $user->create($_POST['nombre'], $_POST['direccion'], $_POST['telefono']);
         return $user;
 
-        exit;
+        
     }
 
     // actializar un registro
@@ -81,4 +81,3 @@ class ClienteController
   $idExistente = 1 ;
   echo " Prabando ID)";
   $clienteController ->show($idExistente);
-    
