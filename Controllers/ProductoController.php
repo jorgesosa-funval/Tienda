@@ -4,7 +4,7 @@ namespace Controller;
 
 use Models\Producto;
 
-use PDO;
+
 
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Vendor/autoload.php';
